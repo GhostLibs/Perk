@@ -1,0 +1,57 @@
+name: Perk
+version: '1.0'
+main: de.Main.Perk.Main
+api-version: '1.21'
+authors: [ nospighost ]
+permissions:
+  be.perk.strength:
+    description: Erlaubt dem Spieler, das Strength-Perk zu aktivieren.
+    default: op
+  be.perk.jumpboost:
+    description: Erlaubt dem Spieler, das JumpBoost-Perk zu aktivieren.
+    default: op
+  be.perk.speed:
+    description: Erlaubt dem Spieler, das Speed-Perk zu aktivieren.
+    default: op
+  be.perk.nightvision:
+    description: Erlaubt dem Spieler, das Night Vision-Perk zu aktivieren.
+    default: op
+  be.perk.regeneration:
+    description: Erlaubt dem Spieler, das Regeneration-Perk zu aktivieren.
+    default: op
+  be.perk.fire:
+    description: Erlaubt dem Spieler, das Fire Resistance-Perk zu aktivieren.
+    default: op
+  be.perk.waterbreathing:
+    description: Erlaubt dem Spieler, das Water Breathing-Perk zu aktivieren.
+    default: op
+  be.perk.haste:
+    description: Erlaubt dem Spieler, das Haste-Perk zu aktivieren.
+    default: op
+  be.perk.glowing:
+    description: Erlaubt dem Spieler, das Glowing-Perk zu aktivieren.
+    default: op
+  be.perk.invisible:
+    description: Erlaubt dem Spieler, das Invisible-Perk zu aktivieren.
+    default: op
+  be.perk.slowfalling:
+    description: Erlaubt dem Spieler, das Slow Falling-Perk zu aktivieren.
+    default: op
+  be.perk.luck:
+    description: Erlaubt dem Spieler, das Luck-Perk zu aktivieren.
+    default: op
+  be.perk.keepinventory:
+    description: Erlaubt dem Spieler, das Keep Inventory-Perk zu aktivieren.
+    default: op
+  be.perk.saturation:
+    description: Erlaubt dem Spieler, das Saturation-Perk zu aktivieren.
+    default: op
+  be.perk.resistance:
+    description: Erlaubt dem Spieler, das Resistance-Perk zu aktivieren.
+    default: op
+  be.perk.auto_smelt:
+    description: Erlaubt dem Spieler, das Auto Smelt-Perk zu aktivieren.
+    default: op
+  be.perk.magnet:
+    description: Erlaubt dem Spieler, das Magnet-Perk zu aktivieren.
+    default: op
