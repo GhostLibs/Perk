@@ -126,7 +126,6 @@ public class PerkManager implements Listener {
             config.set("activeperks", playerPerks);
             Main.saveuserdata(config, player.getUniqueId());
 
-            // Entfernen des entsprechenden Potion-Effekts
             switch (perkName) {
                 case "STRENGTH" -> player.removePotionEffect(PotionEffectType.STRENGTH);
                 case "SPEED" -> player.removePotionEffect(PotionEffectType.SPEED);
@@ -136,10 +135,8 @@ public class PerkManager implements Listener {
                 case "FIRE" -> player.removePotionEffect(PotionEffectType.FIRE_RESISTANCE);
                 case "JUMPBOOST" -> player.removePotionEffect(PotionEffectType.JUMP_BOOST);
                 case "ZOMBIE" -> {
-                    // Logik für Zombie-Perk entfernen (falls nötig, spezifisch hinzufügen)
                 }
                 case "GHAST" -> {
-                    // Logik für Ghast-Perk entfernen (falls nötig, spezifisch hinzufügen)
                 }
             }
         }
