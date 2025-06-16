@@ -36,15 +36,22 @@ public class PerkGUI1 {
 
 
     public static void createGUI(Player player) {
+        ItemStack Glas = new ItemStack(Material.PAPER);
+        ItemMeta GlasMeta = Glas.getItemMeta();
+        if (GlasMeta != null) {
+            GlasMeta.setDisplayName(" ");
+            GlasMeta.setCustomModelData(1000);
+            Glas.setItemMeta(GlasMeta);
+        }
         YamlConfiguration config = Main.getuserconfiguration(player.getUniqueId());
         perkGUItwo = Bukkit.createInventory(player, 54, "§cPerks - 2");
         perkGUI = Bukkit.createInventory(player, 54, "§cPerks");
 
         for (int pos : Darkglasmaingui) {
-            perkGUI.setItem(pos, new ItemStack(BLACK_STAINED_GLASS_PANE));
+            perkGUI.setItem(pos, Glas);
         }
         for (int pos : grayglasmainguitwo) {
-            perkGUI.setItem(pos, new ItemStack(GRAY_STAINED_GLASS_PANE));
+            perkGUI.setItem(pos, Glas);
         }
 
         ItemStack staerke = new ItemStack(IRON_SWORD);
@@ -114,9 +121,10 @@ public class PerkGUI1 {
         }
         ItemStack nextpage = new ItemStack(PAPER);
         ItemMeta nextPageMeta = fire.getItemMeta();
-        if (zombieMeta != null) {
-            zombieMeta.setDisplayName("§cNächste Seite");
-            zombie.setItemMeta(zombieMeta);
+        if (nextPageMeta != null) {
+            nextPageMeta.setDisplayName("§cNächste Seite");
+            nextPageMeta.setCustomModelData(1059);
+            nextpage.setItemMeta(nextPageMeta);
         }
         perkGUI.setItem(53, nextpage);
         perkGUI.setItem(34, zombie);

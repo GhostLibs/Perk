@@ -17,7 +17,7 @@
     </properties>
 
     <build>
-        <directory>D:/Programme/mc/Coding/Server/plugins</directory>
+        <directory>D:\Dokumente\Server\plugins</directory>
 
         <plugins>
             <!-- Compiler Plugin -->

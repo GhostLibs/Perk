@@ -47,12 +47,19 @@ public class PerkGUI2 {
         perkGUI.setItem(10, staerke);
         playerPerkGUIs.put(playerId, perkGUI);
 
+        ItemStack Glas = new ItemStack(Material.PAPER);
+        ItemMeta GlasMeta = Glas.getItemMeta();
+        if (GlasMeta != null) {
+            GlasMeta.setDisplayName(" ");
+            GlasMeta.setCustomModelData(1000);
+            Glas.setItemMeta(GlasMeta);
+        }
 
         for (int pos : darkglasmainguitwo) {
-            perkGUItwo.setItem(pos, new ItemStack(Material.BLACK_STAINED_GLASS_PANE));
+            perkGUItwo.setItem(pos, Glas);
         }
         for (int pos : grayglasmainguitwo) {
-            perkGUItwo.setItem(pos, new ItemStack(Material.GRAY_STAINED_GLASS_PANE));
+            perkGUItwo.setItem(pos, Glas);
         }
 
         addItem(perkGUItwo, Material.DIAMOND_PICKAXE, "§6Haste Perk", 10);
@@ -69,7 +76,12 @@ public class PerkGUI2 {
         fillGUI2WithRedDyeOrLimeDye(player, 38, "RESISTANCE");
         fillGUI2WithRedDyeOrLimeDye(player, 40, "MAGNET");
         fillGUI2WithRedDyeOrLimeDye(player, 42, "AUTO_SMELT");
-        addItem(perkGUItwo, Material.BARRIER, "§cZurück", 49);
+        ItemStack nextpage = new ItemStack(Material.PAPER);
+        ItemMeta nextPageMeta = nextpage.getItemMeta();
+        if (nextPageMeta != null) {
+            nextPageMeta.setDisplayName("§cZurück");
+            nextPageMeta.setCustomModelData(1058);
+        }
         playerPerkGUItwos.put(playerId, perkGUItwo);
         playerPerkGUItwos.put(playerId, perkGUItwo);
     }
