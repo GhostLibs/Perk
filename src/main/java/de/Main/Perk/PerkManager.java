@@ -49,45 +49,73 @@ public class PerkManager implements Listener {
 
                 if (activePerks.contains("HASTE")) {
                     addPotionEffect(player, PotionEffectType.HASTE, 200, 1);
+                } else {
+                    player.removePotionEffect(PotionEffectType.HASTE);
                 }
                 if (activePerks.contains("STRENGTH")) {
                     addPotionEffect(player, PotionEffectType.STRENGTH, 200, 1);
+                } else {
+                    player.removePotionEffect(PotionEffectType.STRENGTH);
                 }
                 if (activePerks.contains("NIGHT_VISION")) {
-                    addPotionEffect(player, PotionEffectType.NIGHT_VISION, 200, 0);
+                    addPotionEffect(player, PotionEffectType.NIGHT_VISION, 1000, 0);
+                }else {
+                    player.removePotionEffect(PotionEffectType.NIGHT_VISION);
                 }
                 if (activePerks.contains("SPEED")) {
                     addPotionEffect(player, PotionEffectType.SPEED, 200, 1);
+                }else {
+                    player.removePotionEffect(PotionEffectType.SPEED);
                 }
                 if (activePerks.contains("JUMPBOOST")) {
                     addPotionEffect(player, PotionEffectType.JUMP_BOOST, 200, 1);
+                } else {
+                    player.removePotionEffect(PotionEffectType.JUMP_BOOST);
                 }
                 if (activePerks.contains("REGENERATION")) {
                     addPotionEffect(player, PotionEffectType.REGENERATION, 200, 1);
+                } else {
+                    player.removePotionEffect(PotionEffectType.REGENERATION);
                 }
                 if (activePerks.contains("FIRE")) {
                     addPotionEffect(player, PotionEffectType.FIRE_RESISTANCE, 200, 0);
+                } else {
+                    player.removePotionEffect(PotionEffectType.FIRE_RESISTANCE);
                 }
                 if (activePerks.contains("WATER_BREATHING")) {
                     addPotionEffect(player, PotionEffectType.WATER_BREATHING, 200, 0);
+                } else {
+                    player.removePotionEffect(PotionEffectType.WATER_BREATHING);
                 }
                 if (activePerks.contains("GLOWING")) {
                     addPotionEffect(player, PotionEffectType.GLOWING, 200, 0);
+                } else {
+                    player.removePotionEffect(PotionEffectType.GLOWING);
                 }
                 if (activePerks.contains("INVISIBILITY")) {
                     addPotionEffect(player, PotionEffectType.INVISIBILITY, 200, 0);
+                }else {
+                    player.removePotionEffect(PotionEffectType.INVISIBILITY);
                 }
                 if (activePerks.contains("SLOW_FALLING")) {
                     addPotionEffect(player, PotionEffectType.SLOW_FALLING, 200, 0);
+                }else {
+                    player.removePotionEffect(PotionEffectType.SLOW_FALLING);
                 }
                 if (activePerks.contains("LUCK")) {
                     addPotionEffect(player, PotionEffectType.LUCK, 200, 0);
+                }else {
+                    player.removePotionEffect(PotionEffectType.LUCK);
                 }
                 if (activePerks.contains("SATURATION")) {
                     addPotionEffect(player, PotionEffectType.SATURATION, 200, 0);
+                }else {
+                    player.removePotionEffect(PotionEffectType.SATURATION);
                 }
                 if (activePerks.contains("RESISTANCE")) {
                     addPotionEffect(player, PotionEffectType.RESISTANCE, 200, 1);
+                }else {
+                    player.removePotionEffect(PotionEffectType.RESISTANCE);
                 }
 
             }

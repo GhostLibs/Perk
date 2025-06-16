@@ -26,7 +26,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         PaperCommandManager manager = new PaperCommandManager(this);
-        instance = this; // Setzt die Singleton-Instanz
+        instance = this;
         // Dein bisheriger onEnable-Code...
         if (!setupEconomy()) {
             getLogger().severe("Vault wurde nicht gefunden oder kein Economy-Plugin installiert!");

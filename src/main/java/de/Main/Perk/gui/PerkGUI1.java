@@ -84,6 +84,7 @@ public class PerkGUI1 {
         ItemStack regeneratrion = new ItemStack(GOLDEN_CARROT);
         ItemMeta meta3 = regeneratrion.getItemMeta();
         if (meta3 != null) {
+            meta3.setDisplayName("§cRegenerations Perk");
             regeneratrion.setItemMeta(meta3);
         }
         perkGUI.setItem(28, regeneratrion);
@@ -111,7 +112,13 @@ public class PerkGUI1 {
             zombieMeta.setDisplayName("§cZombie Schutz Perk");
             zombie.setItemMeta(zombieMeta);
         }
-
+        ItemStack nextpage = new ItemStack(PAPER);
+        ItemMeta nextPageMeta = fire.getItemMeta();
+        if (zombieMeta != null) {
+            zombieMeta.setDisplayName("§cNächste Seite");
+            zombie.setItemMeta(zombieMeta);
+        }
+        perkGUI.setItem(53, nextpage);
         perkGUI.setItem(34, zombie);
 
         fillGUI1WithRedDyeOrLimeDye(player, 19, "STRENGTH");
@@ -122,8 +129,6 @@ public class PerkGUI1 {
         fillGUI1WithRedDyeOrLimeDye(player, 39, "REGENERATION");
         fillGUI1WithRedDyeOrLimeDye(player, 41, "FIRE");
         fillGUI1WithRedDyeOrLimeDye(player, 43, "GHAST");
-        fillGUI1WithRedDyeOrLimeDye(player, 53, "REDDYE");
-
 
     }
 
