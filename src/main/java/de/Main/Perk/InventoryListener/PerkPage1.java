@@ -23,6 +23,7 @@ import static de.Main.Perk.gui.PerkGUI1.perkGUItwo;
 public class PerkPage1 implements Listener {
 
     public final int switchstatus[] = {19, 21, 23, 25, 37, 39, 41, 43, 45};
+
     @EventHandler(ignoreCancelled = true)
     public void onInventoryClick(InventoryClickEvent event) {
         if (!(event.getWhoClicked() instanceof Player player)) return;
@@ -39,8 +40,13 @@ public class PerkPage1 implements Listener {
         }
         if (title.equalsIgnoreCase("§cPerks")) {
             event.setCancelled(true);
-
-            if (type == Material.RED_DYE) {
+            if (type == Material.PAPER) {
+                int slotNumber = event.getSlot();
+                if (slotNumber == 53) {
+                    player.openInventory(perkGUItwo);
+                }
+            }
+           else if (type == Material.RED_DYE) {
 
                 ItemStack active = new ItemStack(Material.LIME_DYE);
                 ItemMeta activeMeta = active.getItemMeta();
@@ -49,9 +55,7 @@ public class PerkPage1 implements Listener {
                     active.setItemMeta(activeMeta);
                 }
                 int slotNumber = event.getSlot();
-                if (slotNumber == 53) {
-                   player.openInventory(perkGUItwo);
-                }
+
                 if (Arrays.stream(switchstatus).anyMatch(i -> i == slotNumber)) {
 
                     if (perkGUI != null) {
@@ -90,14 +94,11 @@ public class PerkPage1 implements Listener {
                         }
 
 
-
-
-
                     } else {
                         player.sendMessage("§cDie GUI ist nicht korrekt initialisiert.");
                     }
                 }
-            }  else if (type == Material.LIME_DYE) { // Deaktivieren eines Perks
+            } else if (type == Material.LIME_DYE) { // Deaktivieren eines Perks
                 ItemStack deactive = new ItemStack(Material.RED_DYE);
                 ItemMeta deactivemeta = deactive.getItemMeta();
                 if (deactivemeta != null) {
@@ -125,5 +126,5 @@ public class PerkPage1 implements Listener {
             }
         }
     }
-    }
+}
 
